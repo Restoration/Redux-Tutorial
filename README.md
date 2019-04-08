@@ -1,9 +1,9 @@
-# TensorFlow-tsx
+# Redux-Tutorial
 
 Overview
 
 ## Description
-Using Tensor Flow with TypeScript and React which part is going to learn how to develop deep learning.
+Redux tutorial
 
 ### How to prepare environment
 - [React & Webpack](https://www.typescriptlang.org/docs/handbook/react-&-webpack.html)
