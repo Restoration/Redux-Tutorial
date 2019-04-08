@@ -17,6 +17,7 @@
     "@types/react-dom": "^16.8.2",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
+    "redux": "^4.0.1",
     "webpack": "^4.29.6"
   },
   "devDependencies": {
