@@ -1,9 +1,9 @@
 import { connect } from 'react-redux'
 import { toggleTodo } from '../actions'
-import TodoList from '../components/TodoList'
-import { VisibilityFilters } from '../actions'
+import TodoList, { TodoType } from '../components/TodoList'
+import { VisibilityFilters, FilterType } from '../actions'
 
-const getVisibleTodos = (todos, filter) => {
+const getVisibleTodos = (todos: TodoType[], filter: string) => {
   switch (filter) {
     case VisibilityFilters.SHOW_ALL:
       return todos

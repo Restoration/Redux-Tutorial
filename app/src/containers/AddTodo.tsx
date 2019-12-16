@@ -1,14 +1,18 @@
 import * as React from 'react'
 import { connect } from 'react-redux'
-import { addTodo } from '../actions'
+import { addTodo, ActionsType } from '../actions'
 
-const AddTodo = ({ dispatch }) => {
+interface AddTodoProps {
+  dispatch: React.Dispatch<ActionsType>;
+}
+
+const AddTodo: React.SFC<AddTodoProps> = ({ dispatch }): JSX.Element => {
   let input
 
   return (
     <div>
       <form
-        onSubmit={e => {
+        onSubmit={ (e: React.FormEvent<HTMLFormElement>) => {
           e.preventDefault()
           if (!input.value.trim()) {
             return

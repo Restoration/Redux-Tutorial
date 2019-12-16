@@ -13,7 +13,7 @@ import { createStore } from 'redux';
  * follows a different convention (such as function maps) if it makes sense for your
  * project.
  */
-function counter(state = 0, action:any) {
+function counter(state: number = 0, action: 'INCREMENT' | 'DECREMENT') {
   switch (action.type) {
     case 'INCREMENT':
       return state + 1

@@ -2,23 +2,23 @@ import * as React from 'react'
 import * as PropTypes from 'prop-types'
 import Todo from './Todo'
 
-const TodoList = ({ todos, toggleTodo }) => (
+export type TodoType = {
+  id: number,
+  completed: boolean,
+  text: string
+}
+
+
+interface TodoListProps {
+  todos: TodoType[];
+  toggleTodo: (id: number) => void;
+}
+const TodoList: React.SFC<TodoListProps> = ({ todos, toggleTodo }): JSX.Element => (
   <ul>
-    {todos.map(todo => (
+    {todos.map( (todo :TodoType) => (
       <Todo key={todo.id} {...todo} onClick={() => toggleTodo(todo.id)} />
     ))}
   </ul>
 )
-
-TodoList.propTypes = {
-  todos: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      completed: PropTypes.bool.isRequired,
-      text: PropTypes.string.isRequired
-    }).isRequired
-  ).isRequired,
-  toggleTodo: PropTypes.func.isRequired
-}
 
 export default TodoList
